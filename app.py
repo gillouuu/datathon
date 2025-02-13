@@ -19,9 +19,31 @@ def get_riasec():
     return top_three
 
 
-data = pd.read_csv('all_bis.csv')
-aspirations_liste = data["Categorie_y"].unique()
-aspirations = [{'label':x, 'value':x} for x in aspirations_liste if len(x) < 25]
+data = pd.read_csv('all_bis.csv', sep=';')
+aspirations_liste = [
+    "Social",
+    "Tissez votre avenir avec les métiers de l'industrie textile et de la mode.",
+    "Agriculture, sylviculture", "Médical", "BTP", "Industries",
+    "Industrie - Chimie", "Élevage, pêche", "Environnement", "Gros Œuvre",
+    "Soins animaliers", "Transport", "Service public", "Maintenance",
+    "Industrie - Métallurgie", "Gestion administrative", "Architecture",
+    "Spectacle", "Industrie - Électronique", "Artisanat d'art",
+    "Commerce de gros", "Conseil, orientation et formation",
+    "Animation et loisir", "Sport", "Nettoyage", "Commerce de détail",
+    "Restauration", "Grande distribution", "Informatique",
+    "Culture et patrimoine", "Immobilier", "Tourisme",
+    "Étude des sols et des bâtiments", "Comptabilité",
+    "Communication et marketing", "Ressources humaines", "Normes",
+    "Audiovisuel", "Logistique et courrier", "Sécurité", "Recherche",
+    "Hôtellerie", "Industrie - Alimentaire", "Assurance",
+    "Télécommunication", "Banque",
+    "Découvrez les opportunités de l'édition où les mots inspirent et informent.",
+    "Énergie", "Finance", "Enseignement", "Activités juridiques",
+    "Imprimerie", "Papier"
+]
+
+
+aspirations = [{'label':x, 'value':str(x)} for x in aspirations_liste if isinstance(x,str) and len(x) < 25]
 riasec_options = [
     {"label": "R - Réaliste", "value": "R"},
     {"label": "I - Investigateur", "value": "I"},
@@ -31,14 +53,14 @@ riasec_options = [
     {"label": "C - Conventionnel", "value": "C"},
 ]
 
-regions_liste = data["région"].unique()
+regions_liste = data["Région"].dropna().unique()
 regions = [{'label':x, 'value':x} for x in regions_liste]
-departements = [{"label":f"{x:02d}", "value":x} for x in range(1,96)]
-departements.append({"label":"971", "value": 971})
-departements.append({"label":"972", "value": 972})
-departements.append({"label":"973", "value": 973})
-departements.append({"label":"974", "value": 974})
-departements.append({"label":"976", "value": 976})
+# departements = [{"label":f"{x:02d}", "value":x} for x in range(1,96)]
+# departements.append({"label":"971", "value": 971})
+# departements.append({"label":"972", "value": 972})
+# departements.append({"label":"973", "value": 973})
+# departements.append({"label":"974", "value": 974})
+# departements.append({"label":"976", "value": 976})
 
 niveaux_diplomes = [{"label": "Bac", "value": "bac"},
     {"label": "Bac +1", "value": "bac_1"},
@@ -97,7 +119,7 @@ composants = html.Div(
                 dcc.Dropdown(
                     id="dropdown-departement",
                     options=regions,
-                    placeholder="Filtrez par un département",
+                    placeholder="Filtrez par une région",
                     style={"width": "250px", "height": "40px"}  # ✅ Même hauteur que les autres
                 ),
                 dcc.Dropdown(
@@ -203,14 +225,15 @@ def display_results():
 
 def create_table(filtered_df):
     
-    filtered_df = filtered_df[['Metiers', 'Intitulé', 'nom']].drop_duplicates(subset=['Metiers', 'Intitulé']).head(7)
-
+    
+    filtered_df = filtered_df[['Metiers', 'Intitulé', 'Nom', 'Région']].drop_duplicates(subset=['Metiers', 'Intitulé']).head(7)
+    print(filtered_df['Région'])
     
 
 
     # Retourner un dash_table.DataTable
     return dash_table.DataTable(
-        columns=[{"name": col, "id": col} for col in ['Metiers','Intitulé', 'nom']],
+        columns=[{"name": col, "id": col} for col in ['Metiers','Intitulé', 'Nom', "Région"]],
         data=filtered_df.to_dict("records"),
         style_table={'overflowX': 'auto'},
         style_cell={'textAlign': 'left', 'padding': '10px'},
@@ -228,7 +251,7 @@ def create_table(filtered_df):
 def update_table(diplome, riasec, region, aspiration):
     if not diplome or not riasec or len(riasec) != 3:
         return "", {"display": "none"}
-    df =pd.read_csv('all_bis.csv')
+    df =pd.read_csv('all_bis.csv', sep=';')
     letters = riasec
     df['Lettre RIASEC Principale'] = df['Lettre RIASEC Principale'].str.strip()
     df['Lettre RIASEC Secondaire'] = df['Lettre RIASEC Secondaire'].str.strip()
@@ -246,11 +269,10 @@ def update_table(diplome, riasec, region, aspiration):
         filtered_df =new_df
     
     if region :
-        filtered_df = filtered_df[filtered_df['région'] == region]
-        filtered_df['région']
+        filtered_df = filtered_df[filtered_df['Région'] == region]
+        
 
     if aspiration :
-        print("hello")
         filtered_df = filtered_df[filtered_df['Categorie_y'] == aspiration]
     
     
