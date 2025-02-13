@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test RIASEC Complet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .hidden { display: none; }
+        .category {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 48%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Test RIASEC Complet</h2>
+    
+    <!-- Pages du test -->
+    <div id="pages">
+        <div id="page1" class="page">
+            <h3>Intérêts et activités</h3>
+            <div class="category"><h4>Réaliste</h4>
+                <div class="question"><input type="checkbox" class="R"> Planter, entretenir des arbres, des arbustes, des fleurs ou cultiver le sol.</div>
+                <div class="question"><input type="checkbox" class="R"> Faire de la couture.</div>
+                <div class="question"><input type="checkbox" class="R"> Effectuer des réparations électriques ou électroniques.</div>
+                <div class="question"><input type="checkbox" class="R"> Réparer des automobiles.</div>
+                <div class="question"><input type="checkbox" class="R"> Fabriquer des objets avec du bois.</div>
+                <div class="question"><input type="checkbox" class="R"> Conduire un camion ou un tracteur.</div>
+                <div class="question"><input type="checkbox" class="R"> Faire des déménagements.</div>
+                <div class="question"><input type="checkbox" class="R"> Entretenir ou réparer de la plomberie ou des systèmes de ventilation.</div>
+                <div class="question"><input type="checkbox" class="R"> Travailler avec des animaux et en prendre soin.</div>
+                <div class="question"><input type="checkbox" class="R"> Travailler à l’extérieur (exposer à la pluie, au soleil, au froid).</div>
+                <div class="question"><input type="checkbox" class="R"> Travailler avec de la machinerie.</div>
+                <div class="question"><input type="checkbox" class="R"> Préparer des repas, des banquets.</div>
+                <div class="question"><input type="checkbox" class="R"> Travailler avec des outils tels que tournevis, ciseaux, pince, etc.</div>
+                <div class="question"><input type="checkbox" class="R"> Effectuer des travaux de peinture.</div>
+                <div class="question"><input type="checkbox" class="R"> Suivre un cours de dessin mécanique.</div>                
+            </div>
+            <div class="category"><h4>Investigateur</h4>
+                <div class="question"><input type="checkbox" class="I">Lire des revues scientifiques ou spécialisées.	</div>
+                <div class="question"><input type="checkbox" class="I">Faire des expériences sur le comportement des animaux.	</div>
+                <div class="question"><input type="checkbox" class="I">Effectuer des analyses en laboratoire.	</div>
+                <div class="question"><input type="checkbox" class="I">Suivre des cours de sciences.	</div>
+                <div class="question"><input type="checkbox" class="I">Établir un diagnostic de maladie chez des patients.	</div>
+                <div class="question"><input type="checkbox" class="I">Expérimenter de nouvelles cultures végétales.	</div>
+                <div class="question"><input type="checkbox" class="I">Créer une nouvelle source d’énergie.	</div>
+                <div class="question"><input type="checkbox" class="I">Concevoir un barrage électrique, un pont, une autoroute, etc.	</div>
+                <div class="question"><input type="checkbox" class="I">Résoudre des problèmes mathématiques.	</div>
+                <div class="question"><input type="checkbox" class="I">Faire des recherches scientifiques pour satisfaire ma curiosité.	</div>
+                <div class="question"><input type="checkbox" class="I">Produire un rapport sur l’évolution économique d’une région.	</div>
+                <div class="question"><input type="checkbox" class="I">Concevoir un plan de reboisement.	</div>
+                <div class="question"><input type="checkbox" class="I">Planifier des soins ou des traitements à donner à des patients.	</div>
+                <div class="question"><input type="checkbox" class="I">Faire des recherches sur les civilisations anciennes.	</div>
+                <div class="question"><input type="checkbox" class="I">Faire de la programmation informatique	</div>                       
+            </div>
+            <div class="category"><h4>Artistique</h4>
+                <div class="question"><input type="checkbox" class="A">Écrire des romans, des articles de journaux.	</div>
+                <div class="question"><input type="checkbox" class="A">Dessiner des meubles, des plans de maison, des décors, etc.	</div>
+                <div class="question"><input type="checkbox" class="A">Interpréter ou mettre en scène une pièce de théâtre	</div>
+                <div class="question"><input type="checkbox" class="A">Jouer dans un orchestre	</div>
+                <div class="question"><input type="checkbox" class="A">Créer des pièces d’artisanat.	</div>
+                <div class="question"><input type="checkbox" class="A">Imaginer de nouvelles façons de faire les choses.	</div>
+                <div class="question"><input type="checkbox" class="A">Embellir l’environnement.	</div>
+                <div class="question"><input type="checkbox" class="A">Créer une nouvelle coupe de cheveux ou de nouveau vêtement.	</div>
+                <div class="question"><input type="checkbox" class="A">Faire de la photographie publicitaire ou artistique.	</div>
+                <div class="question"><input type="checkbox" class="A">Concevoir et réaliser des arrangements de fleurs.	</div>
+                <div class="question"><input type="checkbox" class="A">Imaginer une bande dessinée.	</div>
+                <div class="question"><input type="checkbox" class="A">Peindre des tableaux pour une exposition.	</div>
+                <div class="question"><input type="checkbox" class="A">Décorer des vitrines de magasins.	</div>
+                <div class="question"><input type="checkbox" class="A">Écrire des critiques de pièces de théâtre, de films, de livres, etc.	</div>
+                <div class="question"><input type="checkbox" class="A">Apprendre des langues.	</div>                                    
+            </div>
+            <div class="category"><h4>Social</h4>
+                <div class="question"><input type="checkbox" class="S">S’engager dans des organismes sociaux ou communautaires.	</div>
+                <div class="question"><input type="checkbox" class="S">Rencontrer des gens pour les aider à résoudre leurs problèmes personnels.	</div>
+                <div class="question"><input type="checkbox" class="S">Travailler dans une garderie d’enfants.	</div>
+                <div class="question"><input type="checkbox" class="S">Enseigner aux enfants, aux adolescents, aux adultes.	</div>
+                <div class="question"><input type="checkbox" class="S">Aider les gens à prendre conscience de leurs possibilités.	</div>
+                <div class="question"><input type="checkbox" class="S">Animer un groupe.	</div>
+                <div class="question"><input type="checkbox" class="S">Agir comme hôte / hôtesse lors d’un congrès.	</div>
+                <div class="question"><input type="checkbox" class="S">Tenir un kiosque d’information.	</div>
+                <div class="question"><input type="checkbox" class="S">Offrir un service d’aide téléphonique.	</div>
+                <div class="question"><input type="checkbox" class="S">Consulter les gens sur leurs besoins (sondage, enquête, etc.).	</div>
+                <div class="question"><input type="checkbox" class="S">S’occuper des personnes handicapées physiquement.	</div>
+                <div class="question"><input type="checkbox" class="S">Soigner un malade.	</div>
+                <div class="question"><input type="checkbox" class="S">Aider les délinquants à se réhabiliter.	</div>
+                <div class="question"><input type="checkbox" class="S">Organiser des loisirs.	</div>
+                <div class="question"><input type="checkbox" class="S">Échanger des idées avec d’autres personnes	</div>                                               
+            </div>
+            <div class="category"><h4>Entreprenant</h4>
+                <div class="question"><input type="checkbox" class="E">Vendre un produit ou une idée.	</div>
+                <div class="question"><input type="checkbox" class="E">Mettre sur pied son propre commerce.	</div>
+                <div class="question"><input type="checkbox" class="E">Donner des conférences.	</div>
+                <div class="question"><input type="checkbox" class="E">Acheter pour le compte d’un grand magasin.	</div>
+                <div class="question"><input type="checkbox" class="E">Marchander.	</div>
+                <div class="question"><input type="checkbox" class="E">Diriger du personnel.	</div>
+                <div class="question"><input type="checkbox" class="E">Défendre une cause.	</div>
+                <div class="question"><input type="checkbox" class="E">Faire de la sélection de candidats.	</div>
+                <div class="question"><input type="checkbox" class="E">S’engager à fond dans des activités sociales au travail ou dans son quartier.	</div>
+                <div class="question"><input type="checkbox" class="E">Diriger une entreprise financière.	</div>
+                <div class="question"><input type="checkbox" class="E">Lancer un nouveau produit.	</div>
+                <div class="question"><input type="checkbox" class="E">Fonder un club de consommateurs, une association de protection de l’environnement, une activité de récupération de papier.</div>
+                <div class="question"><input type="checkbox" class="E">Gérer un projet spécial.	</div>
+                <div class="question"><input type="checkbox" class="E">Faire de la politique (municipal, scolaire, provincial)	</div>
+                <div class="question"><input type="checkbox" class="E">Lancer un concours de promotion, une campagne de publicité	</div>                                         
+            </div>
+            <div class="category"><h4>Conventionnel</h4>
+                <div class="question"><input type="checkbox" class="C">Établir des comptes-rendus des dépenses.	</div>
+                <div class="question"><input type="checkbox" class="C">Préparer des procès verbaux de réunions.	</div>
+                <div class="question"><input type="checkbox" class="C">Tenir une caisse dans un établissement commercial ou financier.	</div>
+                <div class="question"><input type="checkbox" class="C">Faire un inventaire et passer des commandes.	</div>
+                <div class="question"><input type="checkbox" class="C">Manipuler un appareil à traitement de textes.	</div>
+                <div class="question"><input type="checkbox" class="C">Maintenir un système de classement (archive, bibliothèque, bureau, etc.)	</div>
+                <div class="question"><input type="checkbox" class="C">Garder mon espace de travail à l’ordre.	</div>
+                <div class="question"><input type="checkbox" class="C">Faire des opérations mathématiques pour préparer des rapports ou faire la tenue de livres.	</div>
+                <div class="question"><input type="checkbox" class="C">S’adonner à des activités régulières.	</div>
+                <div class="question"><input type="checkbox" class="C">Classer des lettres, des rapports, des dossiers.	</div>
+                <div class="question"><input type="checkbox" class="C">Recevoir et faire des appels téléphoniques.	</div>
+                <div class="question"><input type="checkbox" class="C">Vérifier des rapports financiers.	</div>
+                <div class="question"><input type="checkbox" class="C">Faire fonctionner toutes sortes de machines de bureau.	</div>
+                <div class="question"><input type="checkbox" class="C">Effectuer des tâches clairement définies.	</div>
+                <div class="question"><input type="checkbox" class="C">Dactylographier ou réviser des lettres ou des rapports.	</div>                                                       
+            </div>
+            <div class="buttons">
+                <button onclick="changePage(1, 2)">Suivant</button>
+            </div>
+        </div>
+        
+        <div id="page2" class="page hidden">
+            <h3>Intérêts et occupations</h3>
+            <div class="category"><h4>Realistic</h4>
+                <div class="question"><input type="checkbox" class="R"> Mécanicien / mécanicienne d’auto</div>
+                <div class="question"><input type="checkbox" class="R"> Éleveur / éleveuse de bétails</div>
+                <div class="question"><input type="checkbox" class="R"> Technicien / technicienne dentaire</div>
+                <div class="question"><input type="checkbox" class="R"> Travailleur / travailleuse de la construction (menuiserie)</div>
+                <div class="question"><input type="checkbox" class="R"> Couturier / couturière en usine</div>
+                <div class="question"><input type="checkbox" class="R"> Technicien / technicienne en aménagement de la faune</div>
+                <div class="question"><input type="checkbox" class="R"> Horloger / horlogère</div>
+                <div class="question"><input type="checkbox" class="R"> Technicien / technicienne du meuble et du bois ouvré (ébéniste)</div>
+                <div class="question"><input type="checkbox" class="R"> Plombier / plombière</div>
+                <div class="question"><input type="checkbox" class="R"> Technicien / technicienne en mécanique du bâtiment</div>
+                <div class="question"><input type="checkbox" class="R"> Conducteur / conductrice d’autobus</div>
+                <div class="question"><input type="checkbox" class="R"> Technicien / technicienne en entretien d’aéronefs</div>
+                <div class="question"><input type="checkbox" class="R"> Réparateur / réparatrice de télévision</div>
+                <div class="question"><input type="checkbox" class="R"> Ingénieur / ingénieure civil</div>
+                <div class="question"><input type="checkbox" class="R"> Cuisinier / cuisinière</div>
+            </div>
+            <div class="category"><h4>Investigateur</h4>
+                <div class="question"><input type="checkbox" class="I"> Ingénieur / ingénieure en chimie, physique</div>
+                <div class="question"><input type="checkbox" class="I"> Technicien / technicienne en laboratoire médical</div>
+                <div class="question"><input type="checkbox" class="I"> Chercheur / chercheuse scientifique</div>
+                <div class="question"><input type="checkbox" class="I"> Technicien / technicienne en radiologie (rayon X)</div>
+                <div class="question"><input type="checkbox" class="I"> Biologiste</div>
+                <div class="question"><input type="checkbox" class="I"> Technicien / technicienne en informatique</div>
+                <div class="question"><input type="checkbox" class="I"> Médecin ou vétérinaire</div>
+                <div class="question"><input type="checkbox" class="I"> Technicien / technicienne en transformation des produits forestiers</div>
+                <div class="question"><input type="checkbox" class="I"> Météorologiste</div>
+                <div class="question"><input type="checkbox" class="I"> Astronome (étudie le mouvement des astres dans le ciel)</div>
+                <div class="question"><input type="checkbox" class="I"> Technicien / technicienne en dessin conception mécanique</div>
+                <div class="question"><input type="checkbox" class="I"> Économiste</div>
+                <div class="question"><input type="checkbox" class="I"> Technicien / technicienne en procédés métallurgiques (spécialiste dans la transformation des métaux)</div>
+                <div class="question"><input type="checkbox" class="I"> Botaniste</div>
+                <div class="question"><input type="checkbox" class="I"> Technicien / technicienne en chimie analytique (analyse de nouveaux produits chimiques)</div>
+            </div>
+            <div class="category"><h4>Artistique</h4>
+                <div class="question"><input type="checkbox" class="A"> Musicien / musicienne</div>
+                <div class="question"><input type="checkbox" class="A"> Écrivain / écrivaine</div>
+                <div class="question"><input type="checkbox" class="A"> Fleuriste</div>
+                <div class="question"><input type="checkbox" class="A"> Journaliste</div>
+                <div class="question"><input type="checkbox" class="A"> Décorateur / décoratrice d’intérieur</div>
+                <div class="question"><input type="checkbox" class="A"> Compositeur / compositrice (musique)</div>
+                <div class="question"><input type="checkbox" class="A"> Mannequin</div>
+                <div class="question"><input type="checkbox" class="A"> Photographe</div>
+                <div class="question"><input type="checkbox" class="A"> Graphiste</div>
+                <div class="question"><input type="checkbox" class="A"> Directeur de publicité</div>
+                <div class="question"><input type="checkbox" class="A"> Architecte</div>
+                <div class="question"><input type="checkbox" class="A"> Interprète</div>
+                <div class="question"><input type="checkbox" class="A"> Chanteur / chanteuse</div>
+                <div class="question"><input type="checkbox" class="A"> Comédien / comédienne</div>
+                <div class="question"><input type="checkbox" class="A"> Professeur de dessin</div>
+            </div>
+            <div class="category"><h4>Social</h4>
+                <div class="question"><input type="checkbox" class="S"> Infirmier / infirmière auxiliaire</div>
+                <div class="question"><input type="checkbox" class="S"> Agent / agente à l’aide sociale</div>
+                <div class="question"><input type="checkbox" class="S"> Travailleur / travailleuse sociale</div>
+                <div class="question"><input type="checkbox" class="S"> Barmaid / barman</div>
+                <div class="question"><input type="checkbox" class="S"> Professeur à l’élémentaire</div>
+                <div class="question"><input type="checkbox" class="S"> Technicien / technicienne en loisirs</div>
+                <div class="question"><input type="checkbox" class="S"> Technicien / technicienne en garderie d’enfants</div>
+                <div class="question"><input type="checkbox" class="S"> Orthophoniste, orthopédagogue (correction des troubles de l’apprentissage)</div>
+                <div class="question"><input type="checkbox" class="S"> Esthéticien / esthéticienne</div>
+                <div class="question"><input type="checkbox" class="S"> Technicien / technicienne policier / policière</div>
+                <div class="question"><input type="checkbox" class="S"> Médecin généraliste (de famille)</div>
+                <div class="question"><input type="checkbox" class="S"> Directeur / directrice du personnel</div>
+                <div class="question"><input type="checkbox" class="S"> Bibliothécaire</div>
+                <div class="question"><input type="checkbox" class="S"> Technicien / technicienne en hygiène dentaire</div>
+                <div class="question"><input type="checkbox" class="S"> Technicien / technicienne en réadaptation physique</div>
+            </div>
+            <div class="category"><h4>Entreprenant</h4>
+                <div class="question"><input type="checkbox" class="E"> Agent / agente de publicité (marketing)</div>
+                <div class="question"><input type="checkbox" class="E"> Avocat / avocate</div>
+                <div class="question"><input type="checkbox" class="E"> Agent / agente de bord</div>
+                <div class="question"><input type="checkbox" class="E"> Chef de rayons de supermarché</div>
+                <div class="question"><input type="checkbox" class="E"> Commis-vendeur / vendeuse</div>
+                <div class="question"><input type="checkbox" class="E"> Directeur / directrice d’une entreprise</div>
+                <div class="question"><input type="checkbox" class="E"> Politicien / politicienne</div>
+                <div class="question"><input type="checkbox" class="E"> Directeur / directrice des ventes</div>
+                <div class="question"><input type="checkbox" class="E"> Vendeur / vendeuse d’assurances</div>
+                <div class="question"><input type="checkbox" class="E"> Gérant / gérante d’hôtel</div>
+                <div class="question"><input type="checkbox" class="E"> Technicien / technicienne en tourisme</div>
+                <div class="question"><input type="checkbox" class="E"> Propriétaire d’un commerce</div>
+                <div class="question"><input type="checkbox" class="E"> Courtier / coutière en immeubles</div>
+                <div class="question"><input type="checkbox" class="E"> Acheteur / acheteuse</div>
+                <div class="question"><input type="checkbox" class="E"> Agent / agente de voyage</div>
+            </div>
+            <div class="category"><h4>Conventionnel</h4>
+                <div class="question"><input type="checkbox" class="C"> Commis-comptable</div>
+                <div class="question"><input type="checkbox" class="C"> Technicien / technicienne en finance (comptabilité)</div>
+                <div class="question"><input type="checkbox" class="C"> Opérateur / opératrice en informatique</div>
+                <div class="question"><input type="checkbox" class="C"> Secrétaire de service juridique, médical</div>
+                <div class="question"><input type="checkbox" class="C"> Archiviste médical</div>
+                <div class="question"><input type="checkbox" class="C"> Commis aux renseignements</div>
+                <div class="question"><input type="checkbox" class="C"> Bibliotechnicien / bibliotechnicienne</div>
+                <div class="question"><input type="checkbox" class="C"> Expert / experte en impôt</div>
+                <div class="question"><input type="checkbox" class="C"> Caissier / caissière de banque</div>
+                <div class="question"><input type="checkbox" class="C"> Réceptionniste</div>
+                <div class="question"><input type="checkbox" class="C"> Commis au service de la paie</div>
+                <div class="question"><input type="checkbox" class="C"> Gérant / gérante du service de crédits</div>
+                <div class="question"><input type="checkbox" class="C"> Commis de bureau</div>
+                <div class="question"><input type="checkbox" class="C"> Sténodactylo, opérateur (-trice) de saisie</div>
+                <div class="question"><input type="checkbox" class="C"> Technicien / technicienne judiciaire (aux greffes)</div>
+            </div>                        
+            <div class="buttons">
+                <button onclick="changePage(2, 1)">Précédent</button>
+                <button onclick="changePage(2, 3)">Suivant</button>
+            </div>
+        </div>
+        
+        <div id="page3" class="page hidden">
+            <h3>Aptitudes</h3>
+            <div class="category"><h4>Réaliste</h4>
+                <div class="question">
+                    <label>Ma capacité à soulever des poids lourds est :</label><br>
+                    <input type="radio" name="R1" class="R" value="0"> 1
+                    <input type="radio" name="R1" class="R" value="0.5"> 2
+                    <input type="radio" name="R1" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à utiliser des outils, des objets, des machines avec précision est :</label><br>
+                    <input type="radio" name="R2" class="R" value="0"> 1
+                    <input type="radio" name="R2" class="R" value="0.5"> 2
+                    <input type="radio" name="R2" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté à conduire un gros véhicule (camion, autobus) est :</label><br>
+                    <input type="radio" name="R3" class="R" value="0"> 1
+                    <input type="radio" name="R3" class="R" value="0.5"> 2
+                    <input type="radio" name="R3" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude à lire des plans est :</label><br>
+                    <input type="radio" name="R4" class="R" value="0"> 1
+                    <input type="radio" name="R4" class="R" value="0.5"> 2
+                    <input type="radio" name="R4" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté dans les mouvements demandant à voir et à manipuler en même temps est :</label><br>
+                    <input type="radio" name="R5" class="R" value="0"> 1
+                    <input type="radio" name="R5" class="R" value="0.5"> 2
+                    <input type="radio" name="R5" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à comprendre le fonctionnement des éléments de base de tout ouvrage mécanique, électrique (turbine, moteur, pompe…) est :</label><br>
+                    <input type="radio" name="R6" class="R" value="0"> 1
+                    <input type="radio" name="R6" class="R" value="0.5"> 2
+                    <input type="radio" name="R6" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>La rapidité de mes réflexes est :</label><br>
+                    <input type="radio" name="R7" class="R" value="0"> 1
+                    <input type="radio" name="R7" class="R" value="0.5"> 2
+                    <input type="radio" name="R7" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté à faire des réparations est :</label><br>
+                    <input type="radio" name="R8" class="R" value="0"> 1
+                    <input type="radio" name="R8" class="R" value="0.5"> 2
+                    <input type="radio" name="R8" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à m’occuper d’élevage d’animaux est :</label><br>
+                    <input type="radio" name="R9" class="R" value="0"> 1
+                    <input type="radio" name="R9" class="R" value="0.5"> 2
+                    <input type="radio" name="R9" class="R" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à installer et à manipuler divers outils, machines ou appareils est :</label><br>
+                    <input type="radio" name="R10" class="R" value="0"> 1
+                    <input type="radio" name="R10" class="R" value="0.5"> 2
+                    <input type="radio" name="R10" class="R" value="1"> 3
+                </div>
+            
+            </div>
+            <div class="category"><h4>Investigateur</h4>
+                <div class="question">
+                    <label>Mes aptitudes en mathématiques sont :</label><br>
+                    <input type="radio" name="I1" class="I" value="0"> 1
+                    <input type="radio" name="I1" class="I" value="0.5"> 2
+                    <input type="radio" name="I1" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mes capacités en sciences (biologie, physique, chimie) sont :</label><br>
+                    <input type="radio" name="I2" class="I" value="0"> 1
+                    <input type="radio" name="I2" class="I" value="0.5"> 2
+                    <input type="radio" name="I2" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à me concentrer sur une tâche abstraite est :</label><br>
+                    <input type="radio" name="I3" class="I" value="0"> 1
+                    <input type="radio" name="I3" class="I" value="0.5"> 2
+                    <input type="radio" name="I3" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité d’analyse est :</label><br>
+                    <input type="radio" name="I4" class="I" value="0"> 1
+                    <input type="radio" name="I4" class="I" value="0.5"> 2
+                    <input type="radio" name="I4" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité de synthèse est :</label><br>
+                    <input type="radio" name="I5" class="I" value="0"> 1
+                    <input type="radio" name="I5" class="I" value="0.5"> 2
+                    <input type="radio" name="I5" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon talent à rédiger clairement un texte est :</label><br>
+                    <input type="radio" name="I6" class="I" value="0"> 1
+                    <input type="radio" name="I6" class="I" value="0.5"> 2
+                    <input type="radio" name="I6" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à saisir et comprendre des directives rapidement est :</label><br>
+                    <input type="radio" name="I7" class="I" value="0"> 1
+                    <input type="radio" name="I7" class="I" value="0.5"> 2
+                    <input type="radio" name="I7" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté à apprendre des nouveaux sujets avec facilité et avec aise est :</label><br>
+                    <input type="radio" name="I8" class="I" value="0"> 1
+                    <input type="radio" name="I8" class="I" value="0.5"> 2
+                    <input type="radio" name="I8" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté à solutionner des problèmes abstraits est :</label><br>
+                    <input type="radio" name="I9" class="I" value="0"> 1
+                    <input type="radio" name="I9" class="I" value="0.5"> 2
+                    <input type="radio" name="I9" class="I" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté à faire des travaux de laboratoire est :</label><br>
+                    <input type="radio" name="I10" class="I" value="0"> 1
+                    <input type="radio" name="I10" class="I" value="0.5"> 2
+                    <input type="radio" name="I10" class="I" value="1"> 3
+                </div>
+            
+            </div>
+            <div class="category"><h4>Artistique</h4>
+                <div class="question">
+                    <label>Ma capacité à me représenter la forme d’objets en deux ou trois dimensions est :</label><br>
+                    <input type="radio" name="A1" class="A" value="0"> 1
+                    <input type="radio" name="A1" class="A" value="0.5"> 2
+                    <input type="radio" name="A1" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à apprendre des langues, y compris ma langue maternelle est :</label><br>
+                    <input type="radio" name="A2" class="A" value="0"> 1
+                    <input type="radio" name="A2" class="A" value="0.5"> 2
+                    <input type="radio" name="A2" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude en arts plastiques (dessin, sculpture, peinture, etc.) est :</label><br>
+                    <input type="radio" name="A3" class="A" value="0"> 1
+                    <input type="radio" name="A3" class="A" value="0.5"> 2
+                    <input type="radio" name="A3" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude dans les arts de la scène (théâtre, danse, musique, etc.) est :</label><br>
+                    <input type="radio" name="A4" class="A" value="0"> 1
+                    <input type="radio" name="A4" class="A" value="0.5"> 2
+                    <input type="radio" name="A4" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité d’inventer, de créer, de concevoir est :</label><br>
+                    <input type="radio" name="A5" class="A" value="0"> 1
+                    <input type="radio" name="A5" class="A" value="0.5"> 2
+                    <input type="radio" name="A5" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à accepter la critique est :</label><br>
+                    <input type="radio" name="A6" class="A" value="0"> 1
+                    <input type="radio" name="A6" class="A" value="0.5"> 2
+                    <input type="radio" name="A6" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à travailler par moi-même est :</label><br>
+                    <input type="radio" name="A7" class="A" value="0"> 1
+                    <input type="radio" name="A7" class="A" value="0.5"> 2
+                    <input type="radio" name="A7" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude à exprimer concrètement mes idées créatrices dans le médium de mon choix (musique, écriture, danse, dessin, etc.) est :</label><br>
+                    <input type="radio" name="A8" class="A" value="0"> 1
+                    <input type="radio" name="A8" class="A" value="0.5"> 2
+                    <input type="radio" name="A8" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude à tolérer l’insécurité (peur du lendemain) est :</label><br>
+                    <input type="radio" name="A9" class="A" value="0"> 1
+                    <input type="radio" name="A9" class="A" value="0.5"> 2
+                    <input type="radio" name="A9" class="A" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté à observer les légères différences de forme ou de teinte est :</label><br>
+                    <input type="radio" name="A10" class="A" value="0"> 1
+                    <input type="radio" name="A10" class="A" value="0.5"> 2
+                    <input type="radio" name="A10" class="A" value="1"> 3
+                </div>
+            
+            </div>
+            <div class="category"><h4>Social</h4>
+                <div class="question">
+                    <label>Mon aptitude à travailler en équipe est :</label><br>
+                    <input type="radio" name="S1" class="S" value="0"> 1
+                    <input type="radio" name="S1" class="S" value="0.5"> 2
+                    <input type="radio" name="S1" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon sens de l’organisation est :</label><br>
+                    <input type="radio" name="S2" class="S" value="0"> 1
+                    <input type="radio" name="S2" class="S" value="0.5"> 2
+                    <input type="radio" name="S2" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma faculté de prévoir, de deviner (intuition) est :</label><br>
+                    <input type="radio" name="S3" class="S" value="0"> 1
+                    <input type="radio" name="S3" class="S" value="0.5"> 2
+                    <input type="radio" name="S3" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à diriger des interactions dans un groupe (animation) est :</label><br>
+                    <input type="radio" name="S4" class="S" value="0"> 1
+                    <input type="radio" name="S4" class="S" value="0.5"> 2
+                    <input type="radio" name="S4" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à maintenir des relations suivies avec les gens est :</label><br>
+                    <input type="radio" name="S5" class="S" value="0"> 1
+                    <input type="radio" name="S5" class="S" value="0.5"> 2
+                    <input type="radio" name="S5" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude à être touché/e par les émotions des autres tout en demeurant objectif (empathie) est :</label><br>
+                    <input type="radio" name="S6" class="S" value="0"> 1
+                    <input type="radio" name="S6" class="S" value="0.5"> 2
+                    <input type="radio" name="S6" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à réagir correctement devant les situations qui se présentent (équilibre émotionnel) est :</label><br>
+                    <input type="radio" name="S7" class="S" value="0"> 1
+                    <input type="radio" name="S7" class="S" value="0.5"> 2
+                    <input type="radio" name="S7" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à aider les autres, à les comprendre, à les écouter est :</label><br>
+                    <input type="radio" name="S8" class="S" value="0"> 1
+                    <input type="radio" name="S8" class="S" value="0.5"> 2
+                    <input type="radio" name="S8" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à expliquer les choses clairement est :</label><br>
+                    <input type="radio" name="S9" class="S" value="0"> 1
+                    <input type="radio" name="S9" class="S" value="0.5"> 2
+                    <input type="radio" name="S9" class="S" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à communiquer avec les autres est :</label><br>
+                    <input type="radio" name="S10" class="S" value="0"> 1
+                    <input type="radio" name="S10" class="S" value="0.5"> 2
+                    <input type="radio" name="S10" class="S" value="1"> 3
+                </div>
+            
+            </div>
+            
+            <div class="category"><h4>Entreprenant</h4>
+                <div class="question">
+                    <label>Ma facilité à m’exprimer en public est :</label><br>
+                    <input type="radio" name="E1" class="E" value="0"> 1
+                    <input type="radio" name="E1" class="E" value="0.5"> 2
+                    <input type="radio" name="E1" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon talent pour vendre est :</label><br>
+                    <input type="radio" name="E2" class="E" value="0"> 1
+                    <input type="radio" name="E2" class="E" value="0.5"> 2
+                    <input type="radio" name="E2" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon sens des affaires est :</label><br>
+                    <input type="radio" name="E3" class="E" value="0"> 1
+                    <input type="radio" name="E3" class="E" value="0.5"> 2
+                    <input type="radio" name="E3" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté à diriger, à mener les autres est :</label><br>
+                    <input type="radio" name="E4" class="E" value="0"> 1
+                    <input type="radio" name="E4" class="E" value="0.5"> 2
+                    <input type="radio" name="E4" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à prendre une décision seul/e est :</label><br>
+                    <input type="radio" name="E5" class="E" value="0"> 1
+                    <input type="radio" name="E5" class="E" value="0.5"> 2
+                    <input type="radio" name="E5" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon habileté à me faire valoir en société est :</label><br>
+                    <input type="radio" name="E6" class="E" value="0"> 1
+                    <input type="radio" name="E6" class="E" value="0.5"> 2
+                    <input type="radio" name="E6" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude à défendre une cause est :</label><br>
+                    <input type="radio" name="E7" class="E" value="0"> 1
+                    <input type="radio" name="E7" class="E" value="0.5"> 2
+                    <input type="radio" name="E7" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à être le premier/ière à proposer ou à faire quelque chose est :</label><br>
+                    <input type="radio" name="E8" class="E" value="0"> 1
+                    <input type="radio" name="E8" class="E" value="0.5"> 2
+                    <input type="radio" name="E8" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon talent pour persuader les gens est :</label><br>
+                    <input type="radio" name="E9" class="E" value="0"> 1
+                    <input type="radio" name="E9" class="E" value="0.5"> 2
+                    <input type="radio" name="E9" class="E" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à demeurer enthousiaste et énergique même en situation difficile est :</label><br>
+                    <input type="radio" name="E10" class="E" value="0"> 1
+                    <input type="radio" name="E10" class="E" value="0.5"> 2
+                    <input type="radio" name="E10" class="E" value="1"> 3
+                </div>
+            
+            </div>
+            <div class="category"><h4>Conventionnel</h4>
+                <div class="question">
+                    <label>Ma capacité à me conformer aux règles établies est :</label><br>
+                    <input type="radio" name="C1" class="C" value="0"> 1
+                    <input type="radio" name="C1" class="C" value="0.5"> 2
+                    <input type="radio" name="C1" class="C" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude à travailler avec précision est :</label><br>
+                    <input type="radio" name="C2" class="C" value="0"> 1
+                    <input type="radio" name="C2" class="C" value="0.5"> 2
+                    <input type="radio" name="C2" class="C" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à disposer les choses selon le rang, la place qui leur convient est :</label><br>
+                    <input type="radio" name="C3" class="C" value="0"> 1
+                    <input type="radio" name="C3" class="C" value="0.5"> 2
+                    <input type="radio" name="C3" class="C" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude en français est :</label><br>
+                    <input type="radio" name="C4" class="C" value="0"> 1
+                    <input type="radio" name="C4" class="C" value="0.5"> 2
+                    <input type="radio" name="C4" class="C" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude à travailler avec les chiffres est :</label><br>
+                    <input type="radio" name="C5" class="C" value="0"> 1
+                    <input type="radio" name="C5" class="C" value="0.5"> 2
+                    <input type="radio" name="C5" class="C" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à observer les détails est :</label><br>
+                    <input type="radio" name="C6" class="C" value="0"> 1
+                    <input type="radio" name="C6" class="C" value="0.5"> 2
+                    <input type="radio" name="C6" class="C" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à m’adapter à un travail routinier est :</label><br>
+                    <input type="radio" name="C7" class="C" value="0"> 1
+                    <input type="radio" name="C7" class="C" value="0.5"> 2
+                    <input type="radio" name="C7" class="C" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Ma capacité à tenir des dossiers et des registres à jour est :</label><br>
+                    <input type="radio" name="C8" class="C" value="0"> 1
+                    <input type="radio" name="C8" class="C" value="0.5"> 2
+                    <input type="radio" name="C8" class="C" value="1"> 3
+                </div>
+
+                <div class="question">
+                    <label>Ma capacité à comprendre et à exécuter des instructions est :</label><br>
+                    <input type="radio" name="C9" class="C" value="0"> 1
+                    <input type="radio" name="C9" class="C" value="0.5"> 2
+                    <input type="radio" name="C9" class="C" value="1"> 3
+                </div>
+            
+                <div class="question">
+                    <label>Mon aptitude à comprendre les structures administratives est :</label><br>
+                    <input type="radio" name="C10" class="C" value="0"> 1
+                    <input type="radio" name="C10" class="C" value="0.5"> 2
+                    <input type="radio" name="C10" class="C" value="1"> 3
+                </div>
+            
+            </div>
+            
+            <div class="buttons">
+                <button onclick="changePage(3, 2)">Précédent</button>
+                <button onclick="changePage(3, 4)">Suivant</button>
+            </div>
+        </div>
+        
+        <div id="page4" class="page hidden">
+            <h3>Personnalités</h3>
+            <div class="category"><h4>Réaliste</h4>
+                <div class="question"><input type="checkbox" class="R"> Je suis conformiste, je me plie facilement aux règlements du milieu où je vis.</div>
+                <div class="question"><input type="checkbox" class="R"> Généralement, j’évite de me faire remarquer.</div>
+                <div class="question"><input type="checkbox" class="R"> J’aime les choses matérielles, concrètes.</div>
+                <div class="question"><input type="checkbox" class="R"> Dans mon travail ou autres, je me montre persistant/e.</div>
+                <div class="question"><input type="checkbox" class="R"> Je démontre un esprit d’équipe pratique et je préfère agir plutôt que de discuter trop longuement de ce que l’on va faire.</div>
+                <div class="question"><input type="checkbox" class="R"> Je suis d’un naturel réservé ; pour savoir mon opinion, on doit me le demander.</div>
+                <div class="question"><input type="checkbox" class="R"> Je suis porté/e à ménager et à prendre soin de mes biens.</div>
+                <div class="question"><input type="checkbox" class="R"> Je suis stable dans mes opinions, ma façon de vivre, mes amitiés.</div>
+                <div class="question"><input type="checkbox" class="R"> Je me présente toujours au naturel, tel que je suis.</div>
+                <div class="question"><input type="checkbox" class="R"> Avec mon entourage, je suis franc/che et sincère.</div>
+            </div>
+            <div class="category"><h4>Investigateur</h4>
+                <div class="question"><input type="checkbox" class="I"> J’analyse les idées, les événements, ce qui se passe autour de moi.</div>
+                <div class="question"><input type="checkbox" class="I"> J’ai l’esprit critique et n’accepte pas facilement n’importe quelle idée.</div>
+                <div class="question"><input type="checkbox" class="I"> Je suis d’un naturel très curieux sur à peu près tout.</div>
+                <div class="question"><input type="checkbox" class="I"> Je tiens à mon indépendance sur le plan des idées, du travail, etc.</div>
+                <div class="question"><input type="checkbox" class="I"> Les gens me considèrent comme une personne intellectuelle plutôt qu’émotive.</div>
+                <div class="question"><input type="checkbox" class="I"> J’ai l’esprit inventif : il m’arrive souvent de trouver une solution originale et efficace à un problème.</div>
+                <div class="question"><input type="checkbox" class="I"> Dans mes activités scolaires ou autres, je me montre méthodique et rationnel/le.</div>
+                <div class="question"><input type="checkbox" class="I"> J’aime la précision dans tout ce que je fais.</div>
+                <div class="question"><input type="checkbox" class="I"> Je demeure réservé/e dans l’expression de mes opinions, de mes sentiments et de mes actes.</div>
+                <div class="question"><input type="checkbox" class="I"> Avant toute décision, je réunis le maximum d’information possible.</div>
+            </div>
+            <div class="category"><h4>Artistique</h4>
+                <div class="question"><input type="checkbox" class="A"> Mes amis/es me considèrent compliqué/e.</div>
+                <div class="question"><input type="checkbox" class="A"> Dans mes diverses activités, je manque souvent d’ordre.</div>
+                <div class="question"><input type="checkbox" class="A"> Dans mes travaux, je fais preuve d’originalité, d’imagination et d’intuition.</div>
+                <div class="question"><input type="checkbox" class="A"> Je suis d’un caractère impulsif.</div>
+                <div class="question"><input type="checkbox" class="A"> Mes émotions sont généralement intenses.</div>
+                <div class="question"><input type="checkbox" class="A"> Je suis porté/e à tout idéaliser et à chercher la perfection.</div>
+                <div class="question"><input type="checkbox" class="A"> J’agis et je pense souvent de façon non conformiste, c’est-à-dire différemment des autres.</div>
+                <div class="question"><input type="checkbox" class="A"> J’exprime mes sentiments par l’entremise de la musique, des beaux-arts, de la poésie, etc.</div>
+                <div class="question"><input type="checkbox" class="A"> Les lendemains ne m’inquiètent pas : je vis au jour le jour.</div>
+                <div class="question"><input type="checkbox" class="A"> J’ai besoin de beaucoup de liberté d’action dans tout ce que j’entreprends.</div>
+            </div>  
+            <div class="category"><h4>Social</h4>
+                <div class="question"><input type="checkbox" class="S"> Quand un problème se pose, je préfère le régler par la discussion et l’entente avec les gens qui m’entourent.</div>
+                <div class="question"><input type="checkbox" class="S"> Je sais me montrer souple, conciliant/e.</div>
+                <div class="question"><input type="checkbox" class="S"> Mes amis/es me considèrent comme bienveillant et compréhensif/ve.</div>
+                <div class="question"><input type="checkbox" class="S"> Généralement, les gens peuvent compter sur ma coopération.</div>
+                <div class="question"><input type="checkbox" class="S"> Les gens me qualifient de sociable et sympathique.</div>
+                <div class="question"><input type="checkbox" class="S"> Je suis d’un naturel serviable.</div>
+                <div class="question"><input type="checkbox" class="S"> J’accepte et j’assume des responsabilités.</div>
+                <div class="question"><input type="checkbox" class="S"> On me considère généreux/se.</div>
+                <div class="question"><input type="checkbox" class="S"> Dans la majorité des circonstances, je suis perspicace, clairvoyant/e.</div>
+                <div class="question"><input type="checkbox" class="S"> Dans l’action comme dans la façon de m’exprimer, je montre de la délicatesse.</div>
+            </div>
+            <div class="category"><h4>Entreprenant</h4>
+                <div class="question"><input type="checkbox" class="E"> L’ambition ne m’effraie pas.</div>
+                <div class="question"><input type="checkbox" class="E"> Je suis un/e optimiste né/e.</div>
+                <div class="question"><input type="checkbox" class="E"> Je suis sociable et populaire ; je parle à tout le monde.</div>
+                <div class="question"><input type="checkbox" class="E"> Je défends toujours mes opinions.</div>
+                <div class="question"><input type="checkbox" class="E"> Il m’arrive souvent de me montrer autoritaire.</div>
+                <div class="question"><input type="checkbox" class="E"> L’aventure m’attire beaucoup.</div>
+                <div class="question"><input type="checkbox" class="E"> Généralement, je suis sûr/e de moi.</div>
+                <div class="question"><input type="checkbox" class="E"> Mes impulsions me dictent souvent ma conduite.</div>
+                <div class="question"><input type="checkbox" class="E"> J’aime être responsable d’activités.</div>
+                <div class="question"><input type="checkbox" class="E"> Même dans des situations critiques ou tendues, je sais prendre l’initiative nécessaire.</div>
+            </div> 
+            <div class="category"><h4>Conventionnel</h4>
+                <div class="question"><input type="checkbox" class="C"> Je suis maître de moi, d’un calme exemplaire.</div>
+                <div class="question"><input type="checkbox" class="C"> J’obéis facilement aux règlements et aux ordres.</div>
+                <div class="question"><input type="checkbox" class="C"> Dans mes travaux, je suis persistant/e et consciencieux/se.</div>
+                <div class="question"><input type="checkbox" class="C"> Je m’efforce de me montrer compétent dans ce qu’on exige de moi.</div>
+                <div class="question"><input type="checkbox" class="C"> L’esprit concret et pratique me guide.</div>
+                <div class="question"><input type="checkbox" class="C"> J’agis méthodiquement dans tout ce que je fais.</div>
+                <div class="question"><input type="checkbox" class="C"> Je travaille avec beaucoup de soin.</div>
+                <div class="question"><input type="checkbox" class="C"> D’une journée à l’autre, j’aime exécuter des tâches semblables.</div>
+                <div class="question"><input type="checkbox" class="C"> Je suis timide et je préfère garder pour moi mes sentiments, mes émotions et mes idées.</div>
+                <div class="question"><input type="checkbox" class="C"> J’aime recevoir des instructions bien claires qui me permettent de savoir exactement ce qu’on attend de moi.</div>
+            </div>                                 
+            <div class="buttons">
+                <button onclick="changePage(4, 3)">Précédent</button>
+                <button onclick="calculateResults()">Voir les résultats</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function changePage(current, next) {
+            document.getElementById(`page${current}`).classList.add("hidden");
+            document.getElementById(`page${next}`).classList.remove("hidden");
+        }
+        
+        function calculateResults() {
+            let categories = ['R', 'I', 'A', 'S', 'E', 'C'];
+            let scores = { R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 };
+            
+            categories.forEach(cat => {
+                let checked = document.querySelectorAll(`input.${cat}:checked, input.${cat}:checked[type=radio]`);
+                checked.forEach(input => {
+                    let value = parseFloat(input.value) || 1;
+                    if (!isNaN(value)) {
+                        scores[cat] += value;
+                    }
+                });
+            });
+            
+            let sortedCategories = Object.entries(scores).sort((a, b) => b[1] - a[1]).slice(0, 3);
+            let topThreeLetters = sortedCategories.map(item => item[0]).join('');
+            
+            console.log("Scores calculés:", scores); 
+            console.log("Top 3 lettres:", topThreeLetters); 
+            
+            document.getElementById("sortedLetters").innerText = "Top 3 : " + topThreeLetters;
+            
+            document.getElementById("result").classList.remove("hidden");
+            fetch('/get_riasec', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ riasec: topThreeLetters })
+        });
+        }
+        
+    </script>
+    <!-- 
+    Pour stocker ca : js
+    localStorage.setItem("topThreeRIASEC", topThreeLetters);
+
+    fetch('/get_riasec', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ riasec: topThreeLetters })
+    }); -->
+
+
+    <!-- Résultats -->
+    <div id="result" class="hidden">
+        <h3>Résultats</h3>
+        <p id="sortedLetters"></p>
+    </div>
+</body>
+</html>
+

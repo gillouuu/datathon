@@ -1,0 +1,99 @@
+```
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test RIASEC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 10px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Test RIASEC - Catégorie Réaliste</h2>
+    <form id="riasecForm">
+        <div class="question">
+            <input type="checkbox" id="q1"> <label for="q1">Planter, entretenir des arbres, des arbustes, des fleurs ou cultiver le sol.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q2"> <label for="q2">Effectuer des réparations électriques ou électroniques.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q3"> <label for="q3">Réparer des automobiles.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q4"> <label for="q4">Fabriquer des objets avec du bois.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q5"> <label for="q5">Conduire un camion ou un tracteur.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q6"> <label for="q6">Faire des déménagements.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q7"> <label for="q7">Entretenir ou réparer de la plomberie ou des systèmes de ventilation.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q8"> <label for="q8">Travailler avec des animaux et en prendre soin.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q9"> <label for="q9">Travailler à l’extérieur (exposer à la pluie, au soleil, au froid).</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q10"> <label for="q10">Travailler avec de la machinerie.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q11"> <label for="q11">Travailler avec des outils tels que tournevis, ciseaux, pince, etc.</label>
+        </div>
+        <div class="question">
+            <input type="checkbox" id="q12"> <label for="q12">Effectuer des travaux de peinture.</label>
+        </div>
+
+        <button type="button" onclick="calculerScore()">Valider</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function calculerScore() {
+            let score = 0;
+            let checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+            score = checkboxes.length;
+            document.getElementById("result").innerHTML = "Votre score R (Réaliste) est : " + score;
+        }
+    </script>
+
+</body>
+</html>
+```

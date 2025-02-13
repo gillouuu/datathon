@@ -1,0 +1,11 @@
+Madame, Monsieur,
+
+Je me permets de vous adresser ma candidature pour intégrer la formation MSc Data Science, 
+qui correspond parfaitement à mon projet professionnel.
+
+Titulaire d'un Bac+5, je souhaite approfondir mes compétences en MSc Data Science 
+afin de m'orienter vers le métier de Ingénieur Machine Learning.
+
+Dans l’attente de votre retour, je vous prie d’agréer, Madame, Monsieur, mes salutations distinguées.
+
+Signature
